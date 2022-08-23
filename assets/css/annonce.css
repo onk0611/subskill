@@ -1,10 +1,14 @@
 .img-annonce {
-    width: 7.5em;
-    height: 7.5em;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0.5em;
 }
 
 .annonce {
-    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(0, 140, 255);
     margin: 0 2em 2em 0;
-    padding: 2em 1em;
+    padding: 1em;
 }
