@@ -1,0 +1,10 @@
+.img-annonce {
+    width: 7.5em;
+    height: 7.5em;
+}
+
+.annonce {
+    border: 1px solid #000;
+    margin: 0 2em 2em 0;
+    padding: 2em 1em;
+}
