@@ -1,0 +1,37 @@
+body {
+    margin: 1em 0 0 2em;
+    top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.connection-established {
+    color: rgb(123, 206, 0);
+    border: 1px solid rgb(123, 206, 0);
+    border-radius: 24px;
+    padding: 1em;
+    max-width: fit-content;
+    transition-duration: 200ms;
+    margin: 1em 0;
+}
+
+.connection-established:hover {
+    color: #fff;
+    background-color: rgb(123, 206, 0);
+    cursor: pointer;
+}
+
+.connection-not-established {
+    color: rgb(206, 0, 0);
+    border: 1px solid rgb(206, 0, 0);
+    border-radius: 24px;
+    padding: 1em;
+    max-width: fit-content;
+    transition-duration: 200ms;
+    margin: 1em 0;
+}
+
+.connection-not-established:hover {
+    color: #fff;
+    background-color: rgb(206, 0, 0);
+    cursor: pointer;
+}
