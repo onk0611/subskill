@@ -1,21 +1,21 @@
 .form-group-filter {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    padding: 1em;
 }
 
 .input-field-search {
     outline: none;
     border: none;
-    border-bottom: 1px solid rgb(0, 140, 255);
     padding: 0.2em 0.5em;
+    border-bottom: 1px solid rgb(0, 140, 255);
     width: 300px;
     color: rgb(0, 140, 255);
 }
 
 .input-field-submit {
-    padding: 0.2em 1em;
-    border-radius: 24px;
+    padding: 0.5em 2em;
+    border-radius: 12px;
     font-size: 1em;
     border: 1px solid rgb(0, 140, 255);
     color: rgb(0, 140, 255);
