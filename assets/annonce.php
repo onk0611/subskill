@@ -63,17 +63,28 @@ $result = $response->fetchAll();
             <input class="postuler" type="button" onclick="alert('Coming Soon ..')" value="📨 Postuler">
         </div>
     </div>
+    
 <?php 
-endforeach;  
+    endforeach;
+?>
+
+<div class="pagination">
+
+<?php
 
 // pagination
 for ($i=1; $i<=$nbrPage; $i++) {
     if ($i==$actual_page) {
-        echo " $i ";
+        echo '<span class="link-actuel-page">' . $i . '</span>';
     } else {
-        echo " <a href=\"index.php?page=$i\">$i</a> ";
+        echo '<a class="link-pagination" href="index.php?page=' . $i . '"> ' . $i . '</a> ';
     }
 }
 
+?>
+
+</div>
+
+<?php
 
 $response->closeCursor();
