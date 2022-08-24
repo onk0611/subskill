@@ -29,8 +29,10 @@ $annonce_per_page = 10;
 $nbrPage = ceil($nbrAnnonce / $annonce_per_page);
 $actual_page = 1;
 
-if(isset($_GET['page'])) {
-    $actual_page = $_GET['page'];
+$getPage = $_GET['page'];
+
+if(isset($getPage) && $getPage>0 && $getPage<=$nbrPage) {
+    $actual_page = $getPage;
 } else {
     $actual_page = 1;
 }
@@ -52,6 +54,7 @@ $result = $response->fetchAll();
     <div class="annonce" value="<?php echo $data['Date'] ?>">
         <img src="<?php echo $json_parsed->{'image'} ?>" class="img-annonce" alt="">
         <div class="container-information">
+            <?php echo $data['id'] ?>
             <?php echo '<h2 class="title-annonce">🖇 ' . $data['Company'] . ' recherche un/une ' . $data['Title'] . ' en ' . $data['Contract'] .'</h2>'; ?>
             <?php echo '<div class="date">📅 ' . date('d/m/Y', strtotime($data['Date'])) . '</div>'; ?>
             <?php echo '<div class="location">📍 ' . $data['Location'] . '</div>'; ?>
@@ -65,7 +68,11 @@ endforeach;
 
 // pagination
 for ($i=1; $i<=$nbrPage; $i++) {
-    echo " <a href=\"index.php?page=$i\">$i</a> /";
+    if ($i==$actual_page) {
+        echo " $i ";
+    } else {
+        echo " <a href=\"index.php?page=$i\">$i</a> ";
+    }
 }
 
 
