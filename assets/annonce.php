@@ -48,10 +48,12 @@ $result = $response->fetchAll();
 <form action="" class="form-group-filter">
     <input class="input-field-search" placeholder="Développeur, intégrateur .." type="search" name="search" id="search-bar">
     <input class="input-field-submit" type="button" value="🔍">
+    <a class="input-field-submit link" href="./index.php?page=1">Réinitialiser les filtres</a>
+    <!-- input de type "reset" fonctionne également -->
 </form>
 
 <?php foreach ($result as $data): ?>
-    <div class="annonce" value="<?php echo $data['Date'] ?>">
+    <div class="annonce" value="<?php echo $data['id'] ?>">
         <img src="<?php echo $json_parsed->{'image'} ?>" class="img-annonce" alt="">
         <div class="container-information">
             <?php echo $data['id'] ?>
