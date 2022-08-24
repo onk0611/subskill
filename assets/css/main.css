@@ -3,3 +3,11 @@ body {
     top: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.title-header {
+    color: #008cff;
+}
+
+.title-header {
+    cursor: pointer;
+}

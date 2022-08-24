@@ -1,5 +1,6 @@
 # Create bid SQL Resquest :
 CREATE TABLE bid (
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 Date DATE NOT NULL,
 Date_Last_Modified DATE NOT NULL,
 Title Varchar(255) NOT NULL,
